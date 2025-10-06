@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+      .card{
+        width: 150px;
+        height: 150px;
+        position: relative;
+        perspective: 400px;
+      }
+      .fornt, .back{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.5s;
+        backface-visibility: hidden;
+      }
+      .back{
+        transform: rotatey(180deg);
+        background: coral;
+      }
+      .fornt{
+        background-color: purple;
+      }
+      .card:hover .back{
+        transform: rotatey(0);
+      }
+      .card:hover .fornt{
+      transform: rotatey(180);
+      }
+    </style>
+<div class="card">
+
+<div class="fron">
+    front
+</div>
+<div class="back">
+    back
+</div>
+</div>
+</body>
+</html>
